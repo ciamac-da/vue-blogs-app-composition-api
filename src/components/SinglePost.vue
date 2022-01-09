@@ -1,5 +1,3 @@
-
-  
 <template>
   <div class="post">
     <router-link :to="{ name: 'Details', params: { id: post.id }}">
@@ -44,7 +42,7 @@ export default {
     display: block;
     width: 100%;
     height: 100%;
-    background: #ff8800;
+    background: rgb(111, 49, 168);
     position: absolute;
     z-index: -1;
     padding-right: 40px;

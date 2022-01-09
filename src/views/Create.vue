@@ -64,7 +64,8 @@ export default {
     width: 100%;
     box-sizing: border-box;
     padding: 10px;
-    border: 1px solid #eee;
+    border: 2px solid rgb(111, 49, 168);
+    border-radius: 10px;
   }
   textarea {
     height: 160px;
@@ -82,7 +83,7 @@ export default {
     display: block;
     width: 100%;
     height: 100%;
-    background: #ff8800;
+    background: rgb(111, 49, 168);
     position: absolute;
     z-index: -1;
     padding-right: 40px;
@@ -92,11 +93,12 @@ export default {
   button {
     display: block;
     margin-top: 30px;
-    background: #ff8800;
+    background: rgb(111, 49, 168);
     color: white;
     border: none;
     padding: 8px 16px;
-    font-size: 18px
+    font-size: 18px;
+    border-radius: 10px;
   }
   .pill {
     display: inline-block;

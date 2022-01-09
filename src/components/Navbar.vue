@@ -17,15 +17,15 @@ export default {
 <style>
 header {
      display: flex;
+     background: rgb(111, 49, 168);
      justify-content: space-between;
      align-items: center;
-     max-width: 1200px;
      margin: 0 auto;
      padding: 10px;
  }
  header h1 {
      color: #dfdfdf;
-     font-size: 48px;
+     font-size: 30px;
  }
  header a {
      color: #bbb;
@@ -33,7 +33,16 @@ header {
      margin-left: 20px;
  }
  header a.router-link-active {
-     color: #444;
-     font-weight: bold;
+     color: #fff;
+     font-weight: bolder;
  }
+ @media (max-width: 600px) {
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+  header nav {
+      padding: 15px;
+  }
+}
 </style>
