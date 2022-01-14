@@ -20,6 +20,7 @@
 </template>
 
 <script>
+import { useRouter } from "vue-router"
 import { ref } from 'vue'
 export default {
   setup() {
@@ -27,9 +28,13 @@ export default {
     const body = ref('')
     const tags = ref([])
     const tag = ref('')
+
+    const router = useRouter()
+
+
     const handleKeydown = () => {
       if (!tags.value.includes(tag.value)) {
-        tag.value = tag.value.replace(/\s/g,'') // remove all whitespace
+        tag.value = tag.value.replace(/\s/g,'') // removes all whitespace
         tags.value.push(tag.value)
       }
       tag.value = ''
@@ -46,6 +51,7 @@ export default {
         headers: { 'Content-Type': 'application/json'},
         body: JSON.stringify(post)
       })
+      router.push({ name: "Home"})
     }
     return { body, title, tags, tag, handleKeydown, handleSubmit }
   },
