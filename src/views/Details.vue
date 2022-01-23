@@ -1,5 +1,3 @@
-
-  
 <template>
   <div v-if="error">{{ error }}</div>
   <div v-if="post" class="post">
@@ -13,13 +11,16 @@
 
 <script>
 import getPost from '@/composables/getPost'
-// component imports
 import Spinner from '../components/Spinner.vue'
+import { useRoute } from "vue-router"
+
 export default {
   props: ['id'],
   components: { Spinner },
+  
   setup(props) {
-    const { error, post, load } = getPost(props.id)
+    const route = useRoute()
+    const { error, post, load } = getPost(route.params.id)
     load()
     return { error, post }
   },

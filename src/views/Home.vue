@@ -12,7 +12,6 @@
 
 <script>
 import getPosts from '../composables/getPosts'
-// component imports
 import PostList from '../components/PostList.vue'
 import Spinner from '../components/Spinner.vue'
 export default {
